@@ -22,8 +22,7 @@ pipeline {
             }
         }
         stage("test") {
-            steps {
-                when {
+            when {
                 expression { params.executeTests }
             }
             steps {
@@ -31,9 +30,7 @@ pipeline {
                     gv.testApp()
                 }
             }
-
-            }
-
+        }
         stage("deploy") {
             steps {
                 script {
@@ -42,4 +39,5 @@ pipeline {
             }
         }
     }
-}}
+}
+
