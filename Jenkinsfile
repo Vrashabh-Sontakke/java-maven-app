@@ -15,7 +15,7 @@ pipeline {
                 expression { params.executeTests }
             }
             steps {
-                echo "Testing version ${params.executeTests}"
+                echo "Testing version ${params.VERSION}"
             }
         }
         stage('Deploy') {
